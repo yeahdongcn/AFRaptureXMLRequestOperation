@@ -6,10 +6,11 @@ Pod::Spec.new do |s|
   s.author           = { "Jan Sanchez" => "jan.sanchez@outlook.com" }
   s.homepage         = 'https://github.com/jansanz/AFRaptureXMLRequestOperation'
   s.source           = { :git => 'https://github.com/jansanz/AFRaptureXMLRequestOperation.git', :tag => '1.0.2' }
-  s.platform         = :ios, '6.0'
+  s.ios.deployment_target = '6.0'
+  s.osx.deployment_target = '10.8'
   s.source_files     = 'AFRaptureXMLRequestOperation/*.{h,m}'
   s.requires_arc     = true
   s.dependency       'AFNetworking', '~> 2.0.2'
   s.dependency       'RaptureXML', '~> 1.0.1'
-  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
+  s.xcconfig         = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
 end
